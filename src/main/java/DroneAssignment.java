@@ -1,4 +1,5 @@
 // DO NOT CHANGE THE CLASS NAME, IT WILL BREAK THE AUTO GRADER
+
 public class DroneAssignment {
     public static void main(String[] args) {
         // Initial drone values
@@ -17,6 +18,8 @@ public class DroneAssignment {
         // Cast altitude (double) to int called displayAltitude
         // Cast battery (double) to int called batteryRounded
         // Print them to check your work (optional)
+        int displayAltitude = (int) altitude;
+        int batteryRounded = (int) battery;
         
         // TODO: Part 2 - Compound Assignment Operators
         // Altitude: Drone climbs 20 meters 
@@ -26,5 +29,18 @@ public class DroneAssignment {
         // use modulo to calculate storage slots used on photos to calculate storage slots used
         // Display "Photos: " + photos
         // Display "Storage slots used: " + photos + " out of 4"
+        displayAltitude += 20;
+        System.out.println("After climbing 20m: " + displayAltitude);
+        batteryRounded -= 15;
+        System.out.println("After battery drain: " + batteryRounded);
+        photos += 3;
+        System.out.println("After taking 3 photos: " + photos);
+        displayAltitude /= 2;
+        System.out.println("After descending to half: " + displayAltitude);
+        photos %= 4;
+        System.out.println("Photos: " + photos);
+        System.out.println("Storage slots used: " + photos + " out of 4");
+
+
     }
 }
